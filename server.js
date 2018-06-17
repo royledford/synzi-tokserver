@@ -4,6 +4,7 @@ const socketIO = require('socket.io')
 
 // our localhost port
 const PORT = process.env.PORT || 4001
+const INDEX = path.join(__dirname, 'index.html')
 
 // const app = express()
 
