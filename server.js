@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 4001
 // const server = http.createServer(app)
 
 const server = express()
-.use((req, res) => res.sendFile(INDEX))
-.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+  .use((req, res) => res.sendFile(INDEX))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`))
 
 // This creates our socket using the instance of the server
 const io = socketIO(server)
@@ -51,4 +51,4 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(port, () => console.log(`Listening on port ${port}`))
+// server.listen(port, () => console.log(`Listening on port ${port}`))
