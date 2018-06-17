@@ -3,12 +3,16 @@ const http = require('http')
 const socketIO = require('socket.io')
 
 // our localhost port
-const port = 4001
+const PORT = process.env.PORT || 4001
 
-const app = express()
+// const app = express()
 
 // our server instance
-const server = http.createServer(app)
+// const server = http.createServer(app)
+
+const server = express()
+.use((req, res) => res.sendFile(INDEX))
+.listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 // This creates our socket using the instance of the server
 const io = socketIO(server)
