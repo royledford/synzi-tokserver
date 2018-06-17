@@ -1,7 +1,7 @@
 const express = require('express')
 const http = require('http')
 const socketIO = require('socket.io')
-
+const path = require('path');
 // our localhost port
 const PORT = process.env.PORT || 4001
 const INDEX = path.join(__dirname, 'index.html')
